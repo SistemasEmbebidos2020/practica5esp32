@@ -3,7 +3,7 @@
 #include <EEPROM.h>
 
 //escribir cadena en memoria eeprom
-void escribirStringEnEEPROM(int direccion, String cadena) {
+void escribirStringEnEEPROM(String cadena, int direccion) {
   int longitudCadena = cadena.length();
   for (int i = 0; i < longitudCadena; i++) {
     EEPROM.write(direccion + i, cadena[i]);
