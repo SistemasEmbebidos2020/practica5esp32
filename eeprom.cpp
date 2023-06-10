@@ -49,10 +49,10 @@ float leerValorFloatDesdeEEPROM(int direccion) {
 
   return valorLeido;
 }
-
+ int pos=50;
 void setup() {
   Serial.begin(115200);
-
+  Serial.println("la lectura del espacio de la eeprom "+String(pos)+" es "+leerStringDeEEPROM(pos));
 
 }
 
