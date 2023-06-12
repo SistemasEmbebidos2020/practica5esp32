@@ -26,9 +26,9 @@ String leerStringDeEEPROM(int direccion) {
 }
 
 void escribirValorLongEnEEPROM(int direccion, long valor) {
-  int tamañoValor = sizeof(valor);
+  int tamanoValor = sizeof(valor);
   
-  for (int i = 0; i < tamañoValor; i++) {
+  for (int i = 0; i < tamanoValor; i++) {
     byte byteAEscribir = (valor >> (i * 8)) & 0xFF;
     EEPROM.write(direccion + i, byteAEscribir);
   }
@@ -38,9 +38,9 @@ void escribirValorLongEnEEPROM(int direccion, long valor) {
 
 long leerValorLongDesdeEEPROM(int direccion) {
   long valorLeido = 0;
-  int tamañoValor = sizeof(valorLeido);
+  int tamanoValor = sizeof(valorLeido);
   
-  for (int i = 0; i < tamañoValor; i++) {
+  for (int i = 0; i < tamanoValor; i++) {
     byte byteLeido = EEPROM.read(direccion + i);
     valorLeido |= (byteLeido << (i * 8));
   }
@@ -50,9 +50,9 @@ long leerValorLongDesdeEEPROM(int direccion) {
 
 void escribirValorFloatEnEEPROM(int direccion, float valor) {
   byte* p = (byte*)(void*)&valor;
-  int tamañoValor = sizeof(valor);
+  int tamanoValor = sizeof(valor);
   
-  for (int i = 0; i < tamañoValor; i++) {
+  for (int i = 0; i < tamanoValor; i++) {
     EEPROM.write(direccion + i, *p);
     p++;
   }
@@ -62,10 +62,10 @@ void escribirValorFloatEnEEPROM(int direccion, float valor) {
 
 float leerValorFloatDesdeEEPROM(int direccion) {
   float valorLeido = 0.0;
-  int tamañoValor = sizeof(valorLeido);
+  int tamanoValor = sizeof(valorLeido);
 
   byte* ptr = (byte*)&valorLeido;
-  for (int i = 0; i < tamañoValor; i++) {
+  for (int i = 0; i < tamanoValor; i++) {
     *ptr = EEPROM.read(direccion + i);
     ptr++;
   }
@@ -75,9 +75,9 @@ float leerValorFloatDesdeEEPROM(int direccion) {
 
 void escribirValorEnteroEnEEPROM(int direccion, int valor) {
   byte* p = (byte*)(void*)&valor;
-  int tamañoValor = sizeof(valor);
+  int tamanoValor = sizeof(valor);
   
-  for (int i = 0; i < tamañoValor; i++) {
+  for (int i = 0; i < tamanoValor; i++) {
     EEPROM.write(direccion + i, *p);
     p++;
   }
@@ -87,9 +87,9 @@ void escribirValorEnteroEnEEPROM(int direccion, int valor) {
 
 int leerValorEnteroDesdeEEPROM(int direccion) {
   int valorLeido = 0;
-  int tamañoValor = sizeof(valorLeido);
+  int tamanoValor = sizeof(valorLeido);
   
-  for (int i = 0; i < tamañoValor; i++) {
+  for (int i = 0; i < tamanoValor; i++) {
     byte byteLeido = EEPROM.read(direccion + i);
     valorLeido |= (byteLeido << (i * 8));
   }
@@ -101,7 +101,7 @@ int leerValorEnteroDesdeEEPROM(int direccion) {
  int pos=50;
 void setup() {
   Serial.begin(115200);
-  EEPROM.begin(512);  //inicializar el tamaño de memoria eeprom a usar
+  EEPROM.begin(512);  //inicializar el tamano de memoria eeprom a usar
 
   Serial.println("la lectura del espacio de la eeprom "+String(pos)+" es "+leerStringDeEEPROM(pos));
 
