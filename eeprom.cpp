@@ -101,6 +101,8 @@ int leerValorEnteroDesdeEEPROM(int direccion) {
  int pos=50;
 void setup() {
   Serial.begin(115200);
+  EEPROM.begin(512);  //inicializar el tamaño de memoria eeprom a usar
+
   Serial.println("la lectura del espacio de la eeprom "+String(pos)+" es "+leerStringDeEEPROM(pos));
 
 }
