@@ -13,7 +13,7 @@ void setup() {
 
   // Escribe ceros en toda la EEPROM
   for (int i = 0; i < EEPROM_SIZE; i++) {
-    EEPROM.write(i, 1); // Escribe 1 en cada byte de la EEPROM
+    EEPROM.write(i, 0); // Escribe 1 en cada byte de la EEPROM
   }
 
   // Guarda los cambios
