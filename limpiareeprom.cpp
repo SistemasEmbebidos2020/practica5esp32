@@ -13,7 +13,7 @@ void setup() {
 
   // Escribe ceros en toda la EEPROM
   for (int i = 0; i < EEPROM_SIZE; i++) {
-    EEPROM.write(i, 0); // Escribe 0 en cada byte de la EEPROM
+    EEPROM.write(i, 1); // Escribe 1 en cada byte de la EEPROM
   }
 
   // Guarda los cambios
@@ -23,8 +23,6 @@ void setup() {
     Serial.println("Error al limpiar EEPROM");
   }
 
-  // Reinicia la ESP32 para asegurarte de que esté limpia
-  ESP.restart();
 }
 
 void loop() {
