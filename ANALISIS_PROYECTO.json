@@ -1,8 +1,9 @@
 {
-  "fecha": "2026-02-05T13:27:16.364528",
-  "tipo_proyecto": "Arduino",
+  "fecha": "2026-02-05T13:49:26.682513",
+  "tipo_proyecto": "ESP32",
   "total_archivos": 2,
   "hardware": [
+    "esp32",
     "arduino"
   ],
   "librerias": [

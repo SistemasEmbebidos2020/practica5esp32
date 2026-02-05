@@ -1,12 +1,13 @@
 // Proyecto de EEPROM con Arduino
-
 #include <EEPROM.h>
 
 // Define el tamaño de la EEPROM (ajusta según tu necesidad)
 const int EEPROM_SIZE = 512;
 
+// Funcion setup()
+// Descripcion: Inicializa la comunicación serie y la EEPROM
 void setup() {
-  // Inicializa la comunicación serie a una velocidad de 115200 baudios
+  // Configura la velocidad de la comunicación serie en 115200 baudios
   Serial.begin(115200);
 
   // Comenta la inicialización de la EEPROM con el tamaño definido
@@ -16,9 +17,9 @@ void setup() {
     return;
   }
 
-  // Escribe ceros en toda la EEPROM
+  // Escribe ceros en toda la EEPROM para limpiarla
   for (int i = 0; i < EEPROM_SIZE; i++) {
-    // Escribe 1 en cada byte de la EEPROM
+    // Escribe 1 en cada byte de la EEPROM, lo que equivale a escribir cero
     EEPROM.write(i, 0);
   }
 
@@ -32,6 +33,8 @@ void setup() {
   }
 }
 
+// Funcion loop()
+// Descripcion: No se necesita hacer nada en el loop (puedes agregar código aquí según sea necesario)
 void loop() {
-  // No se necesita hacer nada en el loop (puedes agregar código aquí según sea necesario)
+  // No se necesita hacer nada en el loop
 }
