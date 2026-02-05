@@ -1,0 +1,13 @@
+{
+  "fecha": "2026-02-05T13:27:16.364528",
+  "tipo_proyecto": "Arduino",
+  "total_archivos": 2,
+  "hardware": [
+    "arduino"
+  ],
+  "librerias": [
+    "Arduino.h",
+    "EEPROM.h"
+  ],
+  "pines": {}
+}
