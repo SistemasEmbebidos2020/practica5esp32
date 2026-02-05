@@ -1,5 +1,7 @@
 #include <Arduino.h>
-
+/*
+  proyecto para esp32
+*/
 #include <EEPROM.h>
 
 //escribir cadena en memoria eeprom
