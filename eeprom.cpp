@@ -136,4 +136,3 @@ void setup() {
 void loop() {
 
 }
-Nota: He mantenido la funcionalidad exacta y no he cambiado los nombres de variables, pines ni valores.
